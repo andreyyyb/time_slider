@@ -1,0 +1,78 @@
+.event-slider {
+    margin-top: auto;
+    padding-bottom: 50px;
+    padding-left: 80px;
+    padding-right: 80px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    .swiper {
+        padding: 20px 0;
+    }
+    
+    .event-slide {
+        &__year {
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 120%;
+            color: #3877EE;
+            margin-bottom: 15px;
+        }
+        &__description {
+            font-family: 'PT Sans', sans-serif;
+            font-size: 20px;
+            line-height: 30px;
+            color: #42567A;
+        }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: #3877EE;
+        background: #fff;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        box-shadow: 0 0 15px rgba(56, 119, 238, 0.1);
+        
+        &::after {
+            font-size: 12px;
+            font-weight: bold;
+        }
+    }
+
+    // Hide default navigation on mobile if needed, but usually kept for accessibility
+}
+
+@media (max-width: 768px) {
+    .event-slider {
+        position: relative;
+        bottom: auto;
+        padding: 0 20px;
+        margin-top: 20px;
+        border-top: 1px solid #C7CDD9;
+        padding-top: 20px;
+        
+        .swiper {
+             padding-bottom: 50px; // Space for pagination
+        }
+        
+        .event-slide__year {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        
+        .event-slide__description {
+            font-size: 14px;
+            line-height: 20px;
+        }
+        
+        .swiper-button-prev,
+        .swiper-button-next {
+            display: none !important;
+        }
+    }
+}
